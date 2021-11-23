@@ -12,6 +12,12 @@ body {
     padding-top: 90px;
 }
 
+@media (min-width: 992px) {
+    body {
+        padding-top: 120px;
+    }
+}
+
 :root {
     --main-color: #CF191A;
 }
@@ -31,6 +37,11 @@ a {
     background: #FFF;
     top: 0;
     left: 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .menu {
@@ -69,4 +80,151 @@ a {
         right: 5px;
         bottom: 5px;
         position: absolute;
+}
+
+@media (min-width: 992px) {
+    .header .logo {
+        height: 100px;
+        width: auto;
+    }
+}
+
+/* CONTAINER */
+.container {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+@media (min-width: 576px) {
+    .container{
+        width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        width: 1320px;
+    }
+}
+
+/* TITLES */
+
+h1 {
+    text-align: center;
+    margin: 30px 0 15px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color:#333;
+}
+
+/* CARD */
+.card {
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-content {
+    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.card-content btn {
+    margin-top: auto;
+}
+
+.card-content .card-price {
+    color: #37C957;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* BUTTON */
+.btn {
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ddd;
+    color: #424242;
+    padding: 10px 15px;
+}
+
+.btn-main {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.btn-main-outline {
+    background-color: transparent;
+    color: var(--main-color);
+    border: 1px solid var(--main-color)
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* PRODUCTS GRID */
+#products-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+@media (min-width: 576px) {
+    #products-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    #products-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
