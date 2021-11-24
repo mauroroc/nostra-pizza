@@ -28,12 +28,12 @@
         <h1>Cardápio Digital</h1>
         <section>
             <h2>Pizzas</h2>
-            <div id="products-grid">
+            <div class="products-grid">
                 <article class="card">
                     <div class="card-content">
                         <img src="assets/img/produtos/pizza-a-moda.jpg" alt="Pizza a moda" width="196" height="120" />
                         <h3>Moda da Casa</h3>
-                        <p class="card-price">R$ 49,90</p>
+                        <p class="price">R$ 49,90</p>
                         <p>Massa artesanal, molho ao sugo, muçarela, Calabresa, cebola e milho.</p>
                         <button class="btn btn-main btn-block">Adicionar</button>
                     </div>
@@ -42,7 +42,7 @@
                     <div class="card-content">
                         <img src="assets/img/produtos/pizza-calabresa.jpg" alt="Pizza a moda" width="196" height="120" />
                         <h3>Calabresa</h3>
-                        <p class="card-price">R$ 49,90</p>
+                        <p class="price">R$ 49,90</p>
                         <p>Massa artesanal, molho ao sugo, muçarela, Calabresa, cebola e milho.</p>
                         <button class="btn btn-main btn-block">Adicionar</button>
                     </div>
@@ -51,7 +51,7 @@
                     <div class="card-content">
                         <img src="assets/img/produtos/pizza-catuperoni.jpg" alt="Pizza a moda" width="196" height="120" />
                         <h3>Catuperoni</h3>
-                        <p class="card-price">R$ 49,90</p>
+                        <p class="price">R$ 49,90</p>
                         <p>Massa artesanal, molho ao sugo, muçarela, Calabresa, cebola e milho. nal, molho ao sugo, muçarela, Calabresa, cebola e milho</p>
                         <button class="btn btn-main btn-block">Adicionar</button>
                     </div>
@@ -60,7 +60,7 @@
                     <div class="card-content">
                         <img src="assets/img/produtos/pizza-camarao.jpg" alt="Pizza a moda" width="196" height="120" />
                         <h3>Camarão</h3>
-                        <p class="card-price">R$ 49,90</p>
+                        <p class="price">R$ 49,90</p>
                         <p>Massa artesanal, molho ao sugo, muçarela, Calabresa, cebola e milho.</p>
                         <button class="btn btn-main btn-block">Adicionar</button>
                     </div>
@@ -69,7 +69,7 @@
                     <div class="card-content">
                         <img src="assets/img/produtos/pizza-frango-palmito.jpg" alt="Pizza a moda" width="196" height="120" />
                         <h3>Frango com Palmito</h3>
-                        <p class="card-price">R$ 49,90</p>
+                        <p class="price">R$ 49,90</p>
                         <p>Massa artesanal, molho ao sugo, muçarela, Calabresa, cebola e milho.</p>
                         <button class="btn btn-main btn-block">Adicionar</button>
                     </div>
@@ -78,7 +78,7 @@
                     <div class="card-content">
                         <img src="assets/img/produtos/pizza-4-carnes.jpg" alt="Pizza a moda" width="196" height="120" />
                         <h3>4 Carnes</h3>
-                        <p class="card-price">R$ 49,90</p>
+                        <p class="price">R$ 49,90</p>
                         <p>Massa artesanal, molho ao sugo, muçarela, Calabresa, cebola e milho.</p>
                         <button class="btn btn-main btn-block">Adicionar</button>
                     </div>
@@ -86,5 +86,55 @@
             </div>
         </section> 
     </main>
+    <footer class="footer">
+        <p>Ou se preferir, chama no WhatsApp:</p>
+        <a href="https://api.whatsapp.com/send/?phone=5571991541122&text=Oi" target="_blank">
+            <i class="fab fa-whatsapp-square"></i>
+            (31) 99999-9999
+        </a>
+    </footer>
+    <aside class="cart-sidebar">
+        <button id="btn-close-cart">
+            <i class="fas fa-times"></i>
+        </button>
+        <!-- <div id="empty-card">
+            <i class="fas fa-shopping-bag"></i>
+            <p class="h2">Sua sacola está vazia</p>
+
+        </div> -->
+        <div id="cart-with-products">
+            <p class="h2">Resumo do pedido:</p>
+                <ul>
+                    <li class="cart-item">
+                        <img src="assets/img/produtos/pizza-4-carnes.jpg" alt="Pizza a moda" width="70" height="70">
+                        <div>
+                            <p class="h3">4 Carnes</p>
+                            <p class="price">R$ 49,90</p>
+                        </div>
+                        <input class="form-input" type="number" min="0" value="1"/>
+                        <button>
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </li>
+                    <li class="cart-item">
+                        <img src="assets/img/produtos/pizza-camarao.jpg" alt="Pizza a moda" width="70" height="70">
+                        <div>
+                            <p class="h3">Camarão</p>
+                            <p class="price">R$ 59,90</p>
+                        </div>
+                        <input class="form-input" type="number" min="0" value="1"/>
+                        <button>
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </li>
+                </ul>
+                <div class="cart-total">
+                    <p class="h2">Total</p>
+                    <p>R$ 109,80</p>
+                </div>
+                <button class="btn btn-main-outline btn-block">Adicionar mais itens</button>
+                <button class="btn btn-main btn-block">Fazer pedido</button>
+        </div>
+    </aside>
 </body>
 </html>
