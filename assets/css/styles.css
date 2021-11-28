@@ -20,6 +20,7 @@ body {
 
 :root {
     --main-color: #CF191A;
+    --main-color-light: #E94242;
 }
 
 a {
@@ -192,10 +193,22 @@ h3, .h3 {
     cursor: pointer;
     background-color: #ddd;
     color: #424242;
-    padding: 10px 15px;
+    padding: 9px 15px;
+    transition: all 0.3s linear;
+}
+
+.btn-main:hover {
+    background-color: var(--main-color-light);
+    border-color: var(--main-color-light);
 }
 
 .btn-main {
+    background-color: var(--main-color);
+    color: white;
+    border: 1px solid var(--main-color);
+}
+
+.btn-main-outline:hover {
     background-color: var(--main-color);
     color: white;
 }
@@ -203,7 +216,7 @@ h3, .h3 {
 .btn-main-outline {
     background-color: transparent;
     color: var(--main-color);
-    border: 1px solid var(--main-color)
+    border: 1px solid var(--main-color);
 }
 
 .btn-block {
