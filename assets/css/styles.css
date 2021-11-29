@@ -65,6 +65,7 @@ a {
     align-items: center;
     color: var(--main-color);
     position: relative;
+    cursor: pointer;
 }
 
 .badge{
@@ -284,7 +285,7 @@ h3, .h3 {
 
 /* CART */
 .cart-sidebar {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: fixed;
     top: 0;
@@ -293,7 +294,10 @@ h3, .h3 {
     height: 100vh;
     background-color: #FFF;
     padding: 15px;
-    display: none;
+}
+
+.cart-sidebar-open {
+    display: flex;
 }
 
 #btn-close-cart {
@@ -302,6 +306,7 @@ h3, .h3 {
     background-color: transparent;
     padding: 5px;
     align-self: flex-end;
+    cursor: pointer;
 }
 
 #empty-card {
