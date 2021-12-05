@@ -41,40 +41,18 @@
         <button id="btn-close-cart">
             <i class="fas fa-times"></i>
         </button>
-        <!-- <div id="empty-card">
+
+        <div id="empty-cart">
             <i class="fas fa-shopping-bag"></i>
             <p class="h2">Sua sacola está vazia</p>
 
-        </div> -->
+        </div>
         <div id="cart-with-products">
             <p class="h2">Resumo do pedido:</p>
-                <ul>
-                    <li class="cart-item">
-                        <img src="assets/img/produtos/pizza-4-carnes.jpg" alt="Pizza a moda" width="70" height="70">
-                        <div>
-                            <p class="h3">4 Carnes</p>
-                            <p class="price">R$ 49,90</p>
-                        </div>
-                        <input class="form-input" type="number" min="0" value="1"/>
-                        <button>
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
-                    </li>
-                    <li class="cart-item">
-                        <img src="assets/img/produtos/pizza-camarao.jpg" alt="Pizza a moda" width="70" height="70">
-                        <div>
-                            <p class="h3">Camarão</p>
-                            <p class="price">R$ 59,90</p>
-                        </div>
-                        <input class="form-input" type="number" min="0" value="1"/>
-                        <button>
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
-                    </li>
-                </ul>
+                <ul></ul>                                  
                 <div class="cart-total">
                     <p class="h2">Total</p>
-                    <p>R$ 109,80</p>
+                    <p id="cart-total-value"></p>
                 </div>
                 <button id="btn-add-more" class="btn btn-main-outline btn-block">Adicionar mais itens</button>
                 <button class="btn btn-main btn-block">Fazer pedido</button>
