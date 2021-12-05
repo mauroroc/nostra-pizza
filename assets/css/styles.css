@@ -229,6 +229,25 @@ h3, .h3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
+    margin-bottom: 16px;
+}
+
+.loading-products {
+    display: block;
+    text-align: center;
+    color: #999;
+    font-size: 30px;
+    margin: 30px 0;
+    animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @media (min-width: 576px) {
@@ -398,4 +417,13 @@ h3, .h3 {
     border-radius: 4px;
     font-size: 16px;
     padding: 9px;
+}
+
+/* ALERTS */
+.alert-error {
+    background-color: #f7b8b8;
+    border: 1px solid #c91212;
+    border-radius: 3px;
+    padding: 10px 15px;
+    color: #be0808;
 }
