@@ -21,8 +21,8 @@ cartSidebar.addEventListener('click', event => event.stopPropagation())
 const keyCart = 'productsCart'
 
 /* Fetch Products */
-const fetchProducts = () => {
-    const groupRootEl = document.querySelector('#groups-root')      
+const groupRootEl = document.querySelector('#groups-root')      
+const fetchProducts = () => {  
     fetch('/products.json')
     .then(response => response.json())
     .then(body => {   
@@ -56,7 +56,8 @@ const fetchProducts = () => {
         groupRootEl.innerHTML = '<p class="alert-error">Falha ao carregar os produtos. Recarregue a página novamente'
     })
 }
-fetchProducts()
+if(groupRootEl) 
+    fetchProducts()
 
 /* Add Products in Cart */
 let productsCart = []
@@ -173,3 +174,31 @@ const iniCart = () => {
 }
 iniCart()
 
+//Form Checkout
+const handleCheckoutSubmit = event => {
+    event.preventDefault()
+    let text = "Confira o pedido\n------------------\n\n"
+    if(productsCart.length == 0) {
+        alert('Nenhum produto no carrinho')
+        return
+    }
+    productsCart.forEach(product => {
+        text += `*${product.qty}x ${product.name}* - R$ ${product.price.toLocaleString('pt-br', { minimumFractionDigits: 2})}\n\n`
+        text += `*Taxa de entrega:* A combinar\n\n`
+        const totalPrice = productsCart.reduce((total, item) => total + item.qty * item.price, 0)
+        text += `*Total: R$ ${totalPrice.toLocaleString('pt-br', { minimumFractionDigits: 2})}*\n\n--------------------\n\n`
+        text += event.target.elements['input-name'].value + '\n'
+        text += event.target.elements['input-phone'].value + '\n'
+        text += event.target.elements['input-cep'].value + '\n'
+        text += event.target.elements['input-address'].value + '\n'
+        text += event.target.elements['input-number'].value + '\n'
+        text += event.target.elements['input-complement'].value + '\n'
+        text += event.target.elements['input-neighborhood'].value + '\n'
+        text += event.target.elements['input-city'].value + '\n'
+    })        
+    text = encodeURI(text)    
+    window.open(`https://web.whatsapp.com/send/?phone=5571991541122&text=${text}`, '_blank')
+}
+
+const formCheckoutEl = document.querySelector('.form-checkout')
+formCheckoutEl.addEventListener('submit', handleCheckoutSubmit)
