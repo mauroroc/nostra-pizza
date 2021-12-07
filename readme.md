@@ -1,1 +1,2 @@
-O botão remover do carrinho não funciona (o this não aponta para o botão clicado) e sim para o window
+Versão sem bugs
+Falta implementar o CEP automático

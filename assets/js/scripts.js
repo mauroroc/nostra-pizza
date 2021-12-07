@@ -104,8 +104,7 @@ const setupCartEvents = () => {
     const btnRemoveCartEls = document.querySelectorAll('.btn-remove-cart')    
     btnRemoveCartEls.forEach(btn => {
         btn.addEventListener('click', removeOfCart)
-    })    
-    console.log(btnRemoveCartEls)
+    })        
     const inputQtyEls = document.querySelectorAll('.input-qty-cart')    
     inputQtyEls.forEach(input => {
         input.addEventListener('keydown', handleKeydown)
@@ -114,12 +113,10 @@ const setupCartEvents = () => {
     })
 }
 
-const removeOfCart = () => {        
-    console.log(this)
-    /*
+//const removeOfCart = (). Para o this funcionar não pode ser arrow function       
+function removeOfCart() {
     const { id } = this.dataset   
     productsCart = productsCart.filter(product => product.id != id)
-    */
     handleCartUpdate()
 }
 
@@ -201,14 +198,20 @@ const handleCheckoutSubmit = event => {
 }
 
 const formCheckoutEl = document.querySelector('.form-checkout')
-formCheckoutEl.addEventListener('submit', handleCheckoutSubmit)
+if(formCheckoutEl) formCheckoutEl.addEventListener('submit', handleCheckoutSubmit)
 
 //iMask
 const inputPhoneEl = document.querySelector('#input-phone')
-IMask(inputPhoneEl, {
-    mask: '(00) 00000-0000'
-})
+if (inputPhoneEl) {
+    IMask(inputPhoneEl, {
+        mask: '(00) 00000-0000'
+    })
+}
+
+
 const inputCepEl = document.querySelector('#input-cep')
-IMask(inputCepEl, {
-    mask: '00000-000'
-})
+if (inputCepEl) {
+    IMask(inputCepEl, {
+        mask: '00000-000'
+    })
+}
