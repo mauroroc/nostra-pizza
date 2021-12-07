@@ -16,7 +16,7 @@
     <div class="container">
         <img class="logo" src="assets/img/logo-nostra-pizza.svg" width="99" height="70" alt="Logomarca da Nostra Pizza">  
         <div class="menu">
-            <a href="#" target="_blank">Saiba Mais</a>
+            <a href="saiba-mais.html" target="_blank">Saiba Mais</a>
             <button id="btn-cart">
                 <i class="fas fa-shopping-bag"></i>
                 <span class="badge">2</span>
@@ -48,6 +48,8 @@
           class="form-input" 
           placeholder="99999-999">
       </div>
+      //COLOCAR O CEP PARA COMPLETAR O ENDEREÇO (deixar o campo numero como foco)
+      //https://brasilapi.com.br/api/cep/v2/41680024
       <div class="form-group">
         <label for="input-address">Endereço</label>
         <input type="text" 
@@ -101,7 +103,8 @@
             </div>
             <a href="/" id="btn-add-more" class="btn btn-main-outline btn-block">Adicionar mais itens</a>            
     </div>
-  </aside>  
+  </aside>
+  <script src="https://unpkg.com/imask"></script>
   <script src="./assets/js/scripts.js"></script>
 </body>
 </html>

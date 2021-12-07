@@ -102,10 +102,10 @@ const handleUpdateQty = event => {
 
 const setupCartEvents = () => {
     const btnRemoveCartEls = document.querySelectorAll('.btn-remove-cart')    
-    btnRemoveCartEls.forEach((btn) => {
+    btnRemoveCartEls.forEach(btn => {
         btn.addEventListener('click', removeOfCart)
     })    
-    //console.log(btnRemoveCartEls)
+    console.log(btnRemoveCartEls)
     const inputQtyEls = document.querySelectorAll('.input-qty-cart')    
     inputQtyEls.forEach(input => {
         input.addEventListener('keydown', handleKeydown)
@@ -202,3 +202,13 @@ const handleCheckoutSubmit = event => {
 
 const formCheckoutEl = document.querySelector('.form-checkout')
 formCheckoutEl.addEventListener('submit', handleCheckoutSubmit)
+
+//iMask
+const inputPhoneEl = document.querySelector('#input-phone')
+IMask(inputPhoneEl, {
+    mask: '(00) 00000-0000'
+})
+const inputCepEl = document.querySelector('#input-cep')
+IMask(inputCepEl, {
+    mask: '00000-000'
+})
