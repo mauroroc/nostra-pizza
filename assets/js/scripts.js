@@ -215,3 +215,25 @@ if (inputCepEl) {
         mask: '00000-000'
     })
 }
+
+//API de CEP
+function changeCEP() { 
+    const cep = inputCepEl.value.replace('-','')
+    const urlApi = `https://brasilapi.com.br/api/cep/v2/${cep}`    
+    fetchAddress(urlApi)
+}
+
+const fetchAddress = (urlApi) => {  
+    fetch(urlApi)
+    .then(response => response.json())
+    .then(body => { 
+        const inputAddressEl = document.querySelector('#input-address')
+        inputAddressEl.value = body.street
+        const inputNeighborhoodEl = document.querySelector('#input-neighborhood')
+        inputNeighborhoodEl.value = body.neighborhood
+        const inputCityhoodEl = document.querySelector('#input-city')
+        inputCityhoodEl.value = body.city   
+        const inputNumberEl = document.querySelector('#input-number') 
+        inputNumberEl.focus()
+    })
+}
